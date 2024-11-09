@@ -111,7 +111,7 @@
         /// <summary>
         /// 주어진 값과 일치하는 모든 키-값 쌍을 찾아 새로운 딕셔너리로 반환합니다.
         /// </summary>
-        /// <param name="findValue">찾고자 하는 값</param>
+        /// <param name="findValue">찾고자 하는 값입니다.</param>
         /// <returns>값이 일치하는 모든 키, 값을 포함하는 새로운 딕셔너리</returns>
         public static Dictionary<K, V> GetOverlapValue<K, V>(this Dictionary<K, V> dict, V findValue)
             => dict.Where(pair => EqualityComparer<V>.Default.Equals(pair.Value, findValue)).ToDictionary(pair => pair.Key, pair => pair.Value) ?? new Dictionary<K, V>();
